@@ -50,6 +50,8 @@ public class Rover {
                     x--;
                 else if (direction == 'N')
                     y++;
+                else if (direction == 'S')
+                    y--;
             }
         }
     }
