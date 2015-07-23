@@ -2,9 +2,10 @@ package com.marsrover;
 
 public class Rover {
 
-    private final int x;
-    private final int y;
-    private final char direction;
+    private int x;
+    private int y;
+    private char direction;
+    private String instructionToExploreMars;
 
     public Rover(int x, int y, char direction) {
         this.x = x;
@@ -14,5 +15,13 @@ public class Rover {
 
     public String getPositionAndDirection() {
         return x + " " + y + " " + direction;
+    }
+
+    public void setInstructionToExploreMars(String instructionToExploreMars) {
+        this.instructionToExploreMars = instructionToExploreMars;
+    }
+
+    public void go() {
+        this.direction = 'S';
     }
 }
