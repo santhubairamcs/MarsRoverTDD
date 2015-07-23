@@ -41,6 +41,8 @@ public class Rover {
                     direction = 'N';
                 else if (direction == 'N')
                     direction = 'W';
+                else if (direction == 'W')
+                    direction = 'S';
             }
         }
     }
