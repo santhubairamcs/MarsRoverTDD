@@ -33,7 +33,7 @@ public class Rover {
                 else if (direction == 'N')
                     direction = 'E';
             }
-            else if (instructionToExploreMars.charAt(index) == 'L'){
+            else if (instructionToExploreMars.charAt(index) == 'L') {
                 if (direction == 'E')
                     direction = 'N';
                 else if (direction == 'N')
@@ -42,6 +42,10 @@ public class Rover {
                     direction = 'S';
                 else if (direction == 'S')
                     direction = 'E';
+            }
+            else if (instructionToExploreMars.charAt(index) == 'M') {
+                if (direction == 'E')
+                    y++;
             }
         }
     }
