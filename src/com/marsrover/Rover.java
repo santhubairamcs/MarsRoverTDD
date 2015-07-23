@@ -22,6 +22,9 @@ public class Rover {
     }
 
     public void go() {
-        this.direction = 'S';
+        if (direction == 'E')
+            direction = 'S';
+        else if (direction == 'S')
+            direction = 'W';
     }
 }
