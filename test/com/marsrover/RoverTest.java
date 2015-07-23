@@ -110,5 +110,15 @@ public class RoverTest {
 
         assertEquals("1 2 E", rover.getPositionAndDirection());
     }
+
+    @Test
+    public void shouldRoverGivesOneTwoEWhenItIsAtOneTwoEastAndTurnLeftFourTimes() {
+        Rover rover = new Rover(1, 2, 'E');
+        rover.setInstructionToExploreMars("LLLL");
+
+        rover.go();
+
+        assertEquals("1 2 E", rover.getPositionAndDirection());
+    }
 }
 
