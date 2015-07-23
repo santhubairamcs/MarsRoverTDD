@@ -13,5 +13,12 @@ public class RoverTest {
 
         assertEquals("2 3 N", rover.getPositionAndDirection());
     }
+
+    @Test
+    public void shouldRoverGivesFourThreeSWhenItIsAtTwoThreePositionAndInSouthDirection() {
+        Rover rover = new Rover(4, 3, 'S');
+
+        assertEquals("4 3 S", rover.getPositionAndDirection());
+    }
 }
 

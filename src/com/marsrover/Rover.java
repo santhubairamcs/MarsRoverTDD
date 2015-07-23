@@ -13,6 +13,6 @@ public class Rover {
     }
 
     public String getPositionAndDirection() {
-        return "2 3 N";
+        return x + " " + y + " " + direction;
     }
 }
