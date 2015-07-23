@@ -25,13 +25,15 @@ public class Rover {
     }
 
     public void go() {
-        if (direction == 'E')
-            direction = 'S';
-        else if (direction == 'S')
-            direction = 'W';
-        else if (direction == 'W')
-            direction = 'N';
-        else if (direction == 'N')
-            direction = 'E';
+        for (int index = 0; index < instructionToExploreMars.length(); index++) {
+            if (direction == 'E')
+                direction = 'S';
+            else if (direction == 'S')
+                direction = 'W';
+            else if (direction == 'W')
+                direction = 'N';
+            else if (direction == 'N')
+                direction = 'E';
+        }
     }
 }
