@@ -128,7 +128,17 @@ public class RoverTest {
 
         rover.go();
 
-        assertEquals("1 3 E", rover.getPositionAndDirection());
+        assertEquals("2 2 E", rover.getPositionAndDirection());
+    }
+
+    @Test
+    public void shouldRoverMovesForwardWestWhenItIsInWestDirectionAndOnMoveInstruction() {
+        Rover rover = new Rover(1, 2, 'W');
+        rover.setInstructionToExploreMars("M");
+
+        rover.go();
+
+        assertEquals("0 2 W", rover.getPositionAndDirection());
     }
 }
 
