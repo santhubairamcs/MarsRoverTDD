@@ -50,5 +50,15 @@ public class RoverTest {
 
         assertEquals("1 2 N", rover.getPositionAndDirection());
     }
+
+    @Test
+    public void shouldRoverGivesOneTwoEWhenItIsAtOneTwoNorthAndTurnRight() {
+        Rover rover = new Rover(1, 2, 'N');
+        rover.setInstructionToExploreMars("R");
+
+        rover.go();
+
+        assertEquals("1 2 E", rover.getPositionAndDirection());
+    }
 }
 
