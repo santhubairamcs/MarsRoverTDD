@@ -1,8 +1,5 @@
 package com.marsrover;
 
-import org.omg.PortableInterceptor.DISCARDING;
-import sun.jvm.hotspot.code.DebugInfoReadStream;
-
 public class Rover {
 
     private int x;
@@ -43,6 +40,8 @@ public class Rover {
                     direction = 'W';
                 else if (direction == 'W')
                     direction = 'S';
+                else if (direction == 'S')
+                    direction = 'E';
             }
         }
     }
