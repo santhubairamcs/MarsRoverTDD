@@ -46,8 +46,10 @@ public class Rover {
             else if (instructionToExploreMars.charAt(index) == 'M') {
                 if (direction == 'E')
                     x++;
-                if (direction == 'W')
+                else if (direction == 'W')
                     x--;
+                else if (direction == 'N')
+                    y++;
             }
         }
     }
