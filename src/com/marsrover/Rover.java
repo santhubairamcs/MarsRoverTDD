@@ -23,36 +23,49 @@ public class Rover {
 
     public void go() {
         for (int index = 0; index < instructionToExploreMars.length(); index++) {
-            if (instructionToExploreMars.charAt(index) == 'R'){
-                if (direction == 'E')
-                    direction = 'S';
-                else if (direction == 'S')
-                    direction = 'W';
-                else if (direction == 'W')
-                    direction = 'N';
-                else if (direction == 'N')
-                    direction = 'E';
+            char instruction = instructionToExploreMars.charAt(index);
+            if (instruction == 'R'){
+                turnRight();
             }
-            else if (instructionToExploreMars.charAt(index) == 'L') {
-                if (direction == 'E')
-                    direction = 'N';
-                else if (direction == 'N')
-                    direction = 'W';
-                else if (direction == 'W')
-                    direction = 'S';
-                else if (direction == 'S')
-                    direction = 'E';
+            else if (instruction == 'L') {
+                turnLeft();
             }
-            else if (instructionToExploreMars.charAt(index) == 'M') {
-                if (direction == 'E')
-                    x++;
-                else if (direction == 'W')
-                    x--;
-                else if (direction == 'N')
-                    y++;
-                else if (direction == 'S')
-                    y--;
+            else if (instruction == 'M') {
+                move();
             }
         }
+    }
+
+    private void move() {
+        if (direction == 'E')
+            x++;
+        else if (direction == 'W')
+            x--;
+        else if (direction == 'N')
+            y++;
+        else if (direction == 'S')
+            y--;
+    }
+
+    private void turnLeft() {
+        if (direction == 'E')
+            direction = 'N';
+        else if (direction == 'N')
+            direction = 'W';
+        else if (direction == 'W')
+            direction = 'S';
+        else if (direction == 'S')
+            direction = 'E';
+    }
+
+    private void turnRight() {
+        if (direction == 'E')
+            direction = 'S';
+        else if (direction == 'S')
+            direction = 'W';
+        else if (direction == 'W')
+            direction = 'N';
+        else if (direction == 'N')
+            direction = 'E';
     }
 }

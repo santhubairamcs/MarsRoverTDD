@@ -159,5 +159,16 @@ public class RoverTest {
         rover.go();
 
         assertEquals("1 1 S", rover.getPositionAndDirection());
-    }}
+    }
+
+    @Test
+    public void check() {
+        Rover rover = new Rover(1, 2, 'N');
+        rover.setInstructionToExploreMars("LMLMLMLMM");
+
+        rover.go();
+
+        assertEquals("1 3 N", rover.getPositionAndDirection());
+    }
+}
 
